@@ -10,7 +10,7 @@ author_id = '' # Id of the user that you want to mimic
 message_timeout_multiplier = 0.9 # Shorten time between each message by multiplier
 max_timeout = 3200 # Max timeout in seconds between each message
 
-skip_to_index = 10 # Skip to index (message nr.)
+skip_to_index = 0 # Skip to index (message nr.)
 
 # Retrieving message history
 
@@ -24,7 +24,7 @@ index = 0
 
 for message in message_history:
     # Skip to index
-    if(skip_to_index > index):
+    if(index < skip_to_index):
         print('Skipping Index / '+str(index))
         index += 1
         continue
